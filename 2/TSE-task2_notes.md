@@ -53,4 +53,8 @@
     9. Copy radgrid code behind
         - Remove the method refernce to the radio button in the Page_Load
         - Remove the RadioButtonList1_SelectedIndexChanged method
+    10. Add EmployeeDetail Web User control file in VS
+        - EmployeeDetail.ascx
+        - EmployeeDetail.ascs.cs
 7. Bind Grid to DataTable [Follow Tutorial](https://docs.telerik.com/devtools/aspnet-ajax/controls/grid/data-binding/understanding-data-binding/server-side-binding/various-data-sources/binding-to-datatable-or-dataset)
+    - This wasn't actually needed can just use the exisiting code but is good to have for reference.
