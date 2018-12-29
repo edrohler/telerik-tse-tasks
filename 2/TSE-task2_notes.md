@@ -2,6 +2,13 @@
 [Source Document](./TSE-Task2.docx)
 - Started 12/28/2019
 
+- Params:
+    * PupUp Mode as Default editor mode
+    * Move DeleteColumn as first index
+    * Enable Filtering on First and Last Name columns
+    * Use only Telerik Controls in EmployeeDetail Control
+    * Export HTML output to DOCX
+
 1. Install the demo's locally using Progress Control Panel
     1. Select item in control panel and click turn features on or off
     2. Select live demos checkbox
