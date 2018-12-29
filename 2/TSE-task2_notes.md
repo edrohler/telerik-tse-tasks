@@ -77,17 +77,16 @@
     - I added a global.asax file and edited the webconfig file.
         - I ran into an error when referencing the stylesheet folders after copying the code over
         - I researched on StackOverflow for the answer to this quick issues.
-            -   ASP.NET WebForms 403.14 error [reference](https://stackoverflow.com/questions/7880852/http-error-403-14-forbidden-error-when-accessing-website)
+            -   IIS 403.14 error [reference](https://stackoverflow.com/questions/7880852/http-error-403-14-forbidden-error-when-accessing-website)
             -   Reviewed live demo web config and matched the add key node in the appsetting of the web.config
 * Now I can research the requirements for the customer and implement them so that they are able to make a purchasing decision.
 11. Set edit mode to default to popup
-    - Seems to just be a setting in the markup
-    - https://docs.telerik.com/devtools/aspnet-ajax/controls/grid/data-editing/edit-mode/popup-edit-form
+    - Seems to just be a setting in the markup [here](https://docs.telerik.com/devtools/aspnet-ajax/controls/grid/data-editing/edit-mode/popup-edit-form)
 12. Configure Filtering on FirstName and LastName Columns
     - Can set this for all columns pretty easily but appears only needs to be done on FN and LN columns
     - I feel like since the data is string based it would be better to have filtering by letter of the alphabet
         - I could use a static list of A, B, C, D, E, etc.
-    - [Sample](https://demos.telerik.com/aspnet-ajax/grid/examples/functionality/filtering/filter-templates/defaultcs.aspx)
+    - [Possible Sample](https://demos.telerik.com/aspnet-ajax/grid/examples/functionality/filtering/filter-templates/defaultcs.aspx)
     - I think I would have asked for more information here to understand their req's but I will just try to implement the excel like filtering since it is text and the filtering on names seems very excel like. Although, the filtering by letter would be an interesting exercise.
     - Followed the [excel-like sample](https://demos.telerik.com/aspnet-ajax/grid/examples/functionality/filtering/excel-like-filtering/defaultcs.aspx)
         - In Default.aspx
