@@ -5,7 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <telerik:RadStyleSheetManager id="RadStyleSheetManager1" runat="server" />
+    <telerik:RadStyleSheetManager id="RadStyleSheetManager1" runat="server">
+        <StyleSheets>
+            <telerik:StyleSheetReference Path="~/styles.css" />
+        </StyleSheets>
+    </telerik:RadStyleSheetManager>
 </head>
 <body>
     <form id="form1" runat="server">

@@ -31,5 +31,15 @@
     2. Open Default.aspx in Design View in Visual Studio
     3. Select RadGrid and Click the Configuration Button
     4. Choose Data Source
-6. Add a MasterPage
+6. Add a MasterPage 
+    - This wasn't needed. Only used to organize the large demo project. We can isolate the Demo Default.asp/cs pages and use it as the master page by combining the DOCTYPE, html, Head and Body tags from teh MastPage.master file in teh live demos folder.
+    - Items to bring over:
+        - DOCTYPE
+        - Head tag
+            - Title tag
+            - Favicon tag
+            - Meta tag
+        - Body tag
+        - RadScriptManager tag
+        - RadStyleSheetManager tag
 7. Bind Grid to DataTable [Follow Tutorial](https://docs.telerik.com/devtools/aspnet-ajax/controls/grid/data-binding/understanding-data-binding/server-side-binding/various-data-sources/binding-to-datatable-or-dataset)
