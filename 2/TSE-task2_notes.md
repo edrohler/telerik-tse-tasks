@@ -31,4 +31,5 @@
     2. Open Default.aspx in Design View in Visual Studio
     3. Select RadGrid and Click the Configuration Button
     4. Choose Data Source
-
+6. Add a MasterPage
+7. Bind Grid to DataTable [Follow Tutorial](https://docs.telerik.com/devtools/aspnet-ajax/controls/grid/data-binding/understanding-data-binding/server-side-binding/various-data-sources/binding-to-datatable-or-dataset)
