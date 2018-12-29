@@ -31,6 +31,7 @@
     2. Open Default.aspx in Design View in Visual Studio
     3. Select RadGrid and Click the Configuration Button
     4. Choose Data Source
+        - This was not used as it would eventually use the DataTable binding in the code behind.
 6. Bind Grid to DataTable [Follow Tutorial](https://docs.telerik.com/devtools/aspnet-ajax/controls/grid/data-binding/understanding-data-binding/server-side-binding/various-data-sources/binding-to-datatable-or-dataset)
     - This wasn't actually needed can just use the exisiting code but is good to have for reference.
 7. Add a MasterPage 
@@ -60,5 +61,10 @@
     - EmployeeDetail.ascs.cs
     - Ensure reference to EmployeeDetail in Default.aspx is correct
 10. Copy the EmployeeDetailsCS.ascx and code behind to new file
-11. Change All ASP controls to Telerik controls in Employee Detail Control
+* At this point, I was able to isolate the demo into a separate project where it was functional and could run without error. However, this included some additional steps not found in the live demo.
+    - I needed to add the datasource and update the northwind db to meet my environment req's
+    - I reviewed the demo code and compared it to the new project created and merged everything that was needed.
+    - I deleted the initial grid that I created to add the datasource.
+        - Essentially, I had to try something and then back it out which makes version control so awesome. :)
+11. Change all ASP controls to Telerik controls in Employee Detail user control file.
     - 
