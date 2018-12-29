@@ -40,6 +40,13 @@
             - Favicon tag
             - Meta tag
         - Body tag
-        - RadScriptManager tag
-        - RadStyleSheetManager tag
+7. Copy Code from demo DefaultCS.aspx to sample Default.aspx
+    1.  RadScriptManager tag
+    2.  RadStyleSheetManager tag
+    3.  RadCodeBlock tag with inline JS scripts
+    4.  RadAjaxManager tag
+        - Remove configurator panel because defaulting to popup form edit mode
+    5. RadAjaxLoadingPanel tag
+    6. RadFormDecortator tag
+    7. Add appsettings for script and stylesheet maangers
 7. Bind Grid to DataTable [Follow Tutorial](https://docs.telerik.com/devtools/aspnet-ajax/controls/grid/data-binding/understanding-data-binding/server-side-binding/various-data-sources/binding-to-datatable-or-dataset)
