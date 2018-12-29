@@ -31,8 +31,10 @@
     2. Open Default.aspx in Design View in Visual Studio
     3. Select RadGrid and Click the Configuration Button
     4. Choose Data Source
-6. Add a MasterPage 
-    - This wasn't needed. Only used to organize the large demo project. We can isolate the Demo Default.asp/cs pages and use it as the master page by combining the DOCTYPE, html, Head and Body tags from teh MastPage.master file in teh live demos folder.
+6. Bind Grid to DataTable [Follow Tutorial](https://docs.telerik.com/devtools/aspnet-ajax/controls/grid/data-binding/understanding-data-binding/server-side-binding/various-data-sources/binding-to-datatable-or-dataset)
+    - This wasn't actually needed can just use the exisiting code but is good to have for reference.
+7. Add a MasterPage 
+    - This wasn't needed. Only used to organize the large demo project. We can isolate the Demo Default.aspx/cs pages and use it as the master page by combining the DOCTYPE, html, Head and Body tags from teh MastPage.master file in teh live demos folder.
     - Items to bring over:
         - DOCTYPE
         - Head tag
@@ -40,7 +42,7 @@
             - Favicon tag
             - Meta tag
         - Body tag
-7. Copy Code from demo DefaultCS.aspx to sample Default.aspx
+8. Copy Code from demo DefaultCS.aspx to sample Default.aspx
     1.  RadScriptManager tag
     2.  RadStyleSheetManager tag
     3.  RadCodeBlock tag with inline JS scripts
@@ -53,8 +55,10 @@
     9. Copy radgrid code behind
         - Remove the method refernce to the radio button in the Page_Load
         - Remove the RadioButtonList1_SelectedIndexChanged method
-    10. Add EmployeeDetail Web User control file in VS
-        - EmployeeDetail.ascx
-        - EmployeeDetail.ascs.cs
-7. Bind Grid to DataTable [Follow Tutorial](https://docs.telerik.com/devtools/aspnet-ajax/controls/grid/data-binding/understanding-data-binding/server-side-binding/various-data-sources/binding-to-datatable-or-dataset)
-    - This wasn't actually needed can just use the exisiting code but is good to have for reference.
+9. Add EmployeeDetail Web User control file in VS
+    - EmployeeDetail.ascx
+    - EmployeeDetail.ascs.cs
+    - Ensure reference to EmployeeDetail in Default.aspx is correct
+10. Copy the EmployeeDetailsCS.ascx and code behind to new file
+11. Change All ASP controls to Telerik controls in Employee Detail Control
+    - 
