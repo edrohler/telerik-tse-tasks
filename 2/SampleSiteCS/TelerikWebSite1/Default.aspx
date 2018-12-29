@@ -48,13 +48,15 @@
     <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1" runat="server">
     </telerik:RadAjaxLoadingPanel>
     <telerik:RadFormDecorator RenderMode="Lightweight" ID="RadFormDecorator1" runat="server" DecorationZoneID="demo" DecoratedControls="All" EnableRoundedCorners="false" />
-    <div>
+    <div id="demo">
         <telerik:RadGrid RenderMode="Lightweight" ID="RadGrid1" runat="server" AllowPaging="True" ShowFooter="true"
             AllowSorting="True" AutoGenerateColumns="False" ShowStatusBar="true" 
             OnPreRender="RadGrid1_PreRender" OnNeedDataSource="RadGrid1_NeedDataSource" OnUpdateCommand="RadGrid1_UpdateCommand"
             OnInsertCommand="RadGrid1_InsertCommand" OnDeleteCommand="RadGrid1_DeleteCommand">
             <MasterTableView Width="100%" CommandItemDisplay="Top" DataKeyNames="EmployeeID" EditFormSettings-PopUpSettings-KeepInScreenBounds="true">
                 <Columns>
+                    <telerik:GridButtonColumn UniqueName="DeleteColumn" Text="Delete" CommandName="Delete">
+                    </telerik:GridButtonColumn>
                     <telerik:GridEditCommandColumn UniqueName="EditCommandColumn">
                     </telerik:GridEditCommandColumn>
                     <telerik:GridBoundColumn UniqueName="TitleOfCourtesy" HeaderText="TOC" DataField="TitleOfCourtesy">
@@ -69,10 +71,8 @@
                     </telerik:GridBoundColumn>
                     <telerik:GridBoundColumn UniqueName="Title" HeaderText="Title" DataField="Title">
                     </telerik:GridBoundColumn>
-                    <telerik:GridButtonColumn UniqueName="DeleteColumn" Text="Delete" CommandName="Delete">
-                    </telerik:GridButtonColumn>
                 </Columns>
-                <EditFormSettings UserControlName="EmployeeDetailsCS.ascx" EditFormType="WebUserControl">
+                <EditFormSettings UserControlName="EmployeeDetail.ascx" EditFormType="WebUserControl">
                     <EditColumn UniqueName="EditCommandColumn1">
                     </EditColumn>
                 </EditFormSettings>
