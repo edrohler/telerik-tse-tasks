@@ -82,6 +82,7 @@
 * Now I can research the requirements for the customer and implement them so that they are able to make a purchasing decision.
 11. Set edit mode to default to popup
     - https://docs.telerik.com/devtools/aspnet-ajax/controls/grid/data-editing/edit-mode/popup-edit-form
-
+12. Configuring FIltering on FirstName and LastName Columns
+    - 
 11. Change all ASP controls to Telerik controls in Employee Detail user control file.
     - 
