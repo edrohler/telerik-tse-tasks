@@ -49,8 +49,8 @@
     </telerik:RadAjaxLoadingPanel>
     <telerik:RadFormDecorator RenderMode="Lightweight" ID="RadFormDecorator1" runat="server" DecorationZoneID="demo" DecoratedControls="All" EnableRoundedCorners="false" />
     <div id="demo">
-        <telerik:RadGrid RenderMode="Lightweight" ID="RadGrid1" runat="server" AllowPaging="True" ShowFooter="true"
-            AllowSorting="True" AutoGenerateColumns="False" ShowStatusBar="true" 
+        <telerik:RadGrid RenderMode="Lightweight" ID="RadGrid1" runat="server" AllowPaging="True" ShowFooter="True"
+            AllowSorting="True" AutoGenerateColumns="False" ShowStatusBar="True" 
             OnPreRender="RadGrid1_PreRender" OnNeedDataSource="RadGrid1_NeedDataSource" OnUpdateCommand="RadGrid1_UpdateCommand"
             OnInsertCommand="RadGrid1_InsertCommand" OnDeleteCommand="RadGrid1_DeleteCommand">
             <MasterTableView Width="100%" CommandItemDisplay="Top" DataKeyNames="EmployeeID" EditMode="PopUp" EditFormSettings-PopUpSettings-KeepInScreenBounds="true">
@@ -62,9 +62,9 @@
                     <telerik:GridBoundColumn UniqueName="TitleOfCourtesy" HeaderText="TOC" DataField="TitleOfCourtesy">
                         <HeaderStyle Width="60px"></HeaderStyle>
                     </telerik:GridBoundColumn>
-                    <telerik:GridBoundColumn UniqueName="FirstName" HeaderText="FirstName" DataField="FirstName">
+                    <telerik:GridBoundColumn UniqueName="FirstName" HeaderText="First Name" DataField="FirstName">
                     </telerik:GridBoundColumn>
-                    <telerik:GridBoundColumn UniqueName="LastName" HeaderText="LastName" DataField="LastName">
+                    <telerik:GridBoundColumn UniqueName="LastName" HeaderText="Last Name" DataField="LastName">
                     </telerik:GridBoundColumn>
                     <telerik:GridBoundColumn UniqueName="HireDate" HeaderText="Hire Date" DataField="HireDate"
                         DataFormatString="{0:d}">
@@ -75,11 +75,19 @@
                 <EditFormSettings UserControlName="EmployeeDetail.ascx" EditFormType="WebUserControl">
                     <EditColumn UniqueName="EditCommandColumn1">
                     </EditColumn>
+
+<PopUpSettings KeepInScreenBounds="True"></PopUpSettings>
                 </EditFormSettings>
             </MasterTableView>
+<GroupingSettings CollapseAllTooltip="Collapse all groups"></GroupingSettings>
+
             <ClientSettings>
                 <ClientEvents OnRowDblClick="RowDblClick" OnPopUpShowing="onPopUpShowing" />
             </ClientSettings>
+
+<FilterMenu RenderMode="Lightweight"></FilterMenu>
+
+<HeaderContextMenu RenderMode="Lightweight"></HeaderContextMenu>
         </telerik:RadGrid>
     </div>
     </form>
