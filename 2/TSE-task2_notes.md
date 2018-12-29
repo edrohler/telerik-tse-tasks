@@ -49,4 +49,8 @@
     5. RadAjaxLoadingPanel tag
     6. RadFormDecortator tag
     7. Add appsettings for script and stylesheet maangers
+    8. Copy radgrid control markup
+    9. Copy radgrid code behind
+        - Remove the method refernce to the radio button in the Page_Load
+        - Remove the RadioButtonList1_SelectedIndexChanged method
 7. Bind Grid to DataTable [Follow Tutorial](https://docs.telerik.com/devtools/aspnet-ajax/controls/grid/data-binding/understanding-data-binding/server-side-binding/various-data-sources/binding-to-datatable-or-dataset)
