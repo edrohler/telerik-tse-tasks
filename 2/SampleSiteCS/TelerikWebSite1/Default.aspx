@@ -20,37 +20,36 @@
             <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQueryInclude.js" />
         </Scripts>
     </telerik:RadScriptManager>
-    <script type="text/javascript">
-        //Put your JavaScript code here.
-    </script>
+    <telerik:RadCodeBlock ID="RadCodeBlock1" runat="server">
+        <script type="text/javascript">
+            function RowDblClick(sender, eventArgs) {
+                sender.get_masterTableView().editItem(eventArgs.get_itemIndexHierarchical());
+            }
+
+            function onPopUpShowing(sender, args) {
+                args.get_popUp().className += " popUpEditForm";
+            }
+        </script>
+    </telerik:RadCodeBlock>
     <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server">
+        <AjaxSettings>
+            <telerik:AjaxSetting AjaxControlID="RadGrid1">
+                <UpdatedControls>
+                    <telerik:AjaxUpdatedControl ControlID="RadGrid1" LoadingPanelID="RadAjaxLoadingPanel1"></telerik:AjaxUpdatedControl>
+                </UpdatedControls>
+            </telerik:AjaxSetting>
+            <telerik:AjaxSetting AjaxControlID="ConfiguratorPanel">
+                <UpdatedControls>
+                    <telerik:AjaxUpdatedControl ControlID="RadGrid1" LoadingPanelID="RadAjaxLoadingPanel1"></telerik:AjaxUpdatedControl>
+                </UpdatedControls>
+            </telerik:AjaxSetting>
+        </AjaxSettings>
     </telerik:RadAjaxManager>
+    <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1" runat="server">
+    </telerik:RadAjaxLoadingPanel>
+    <telerik:RadFormDecorator RenderMode="Lightweight" ID="RadFormDecorator1" runat="server" DecorationZoneID="demo" DecoratedControls="All" EnableRoundedCorners="false" />
     <div>
-        <telerik:RadGrid ID="RadGrid1" runat="server" DataSourceID="SqlDataSource1" AllowPaging="True" AllowSorting="True" PageSize="30" Skin="Metro" Width="720px">
-<GroupingSettings CollapseAllTooltip="Collapse all groups"></GroupingSettings>
-            <ClientSettings>
-                <Scrolling AllowScroll="True" UseStaticHeaders="True" />
-            </ClientSettings>
-            <MasterTableView AutoGenerateColumns="False" DataKeyNames="EmployeeID" DataSourceID="SqlDataSource1">
-                <Columns>
-                    <telerik:GridEditCommandColumn>
-                    </telerik:GridEditCommandColumn>
-                    <telerik:GridClientDeleteColumn FilterControlAltText="Filter column column" UniqueName="column">
-                    </telerik:GridClientDeleteColumn>
-                    <telerik:GridBoundColumn DataField="TitleOfCourtesy" FilterControlAltText="Filter TitleOfCourtesy column" HeaderText="TOC" SortExpression="TitleOfCourtesy" UniqueName="TitleOfCourtesy">
-                    </telerik:GridBoundColumn>
-                    <telerik:GridBoundColumn DataField="FirstName" FilterControlAltText="Filter FirstName column" HeaderText="FirstName" SortExpression="FirstName" UniqueName="FirstName">
-                    </telerik:GridBoundColumn>
-                    <telerik:GridBoundColumn DataField="LastName" FilterControlAltText="Filter LastName column" HeaderText="LastName" SortExpression="LastName" UniqueName="LastName">
-                    </telerik:GridBoundColumn>
-                    <telerik:GridBoundColumn DataField="HireDate" DataType="System.DateTime" FilterControlAltText="Filter HireDate column" HeaderText="HireDate" SortExpression="HireDate" UniqueName="HireDate">
-                    </telerik:GridBoundColumn>
-                    <telerik:GridBoundColumn DataField="Title" FilterControlAltText="Filter Title column" HeaderText="Title" SortExpression="Title" UniqueName="Title">
-                    </telerik:GridBoundColumn>
-                </Columns>
-            </MasterTableView>
-        </telerik:RadGrid>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Employees]"></asp:SqlDataSource>
+
     </div>
     </form>
 </body>
