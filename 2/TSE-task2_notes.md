@@ -79,14 +79,14 @@
         - I researched on StackOverflow for the answer to this quick issues.
             -   IIS 403.14 error [reference](https://stackoverflow.com/questions/7880852/http-error-403-14-forbidden-error-when-accessing-website)
             -   Reviewed live demo web config and matched the add key node in the appsetting of the web.config
-* Now I can research the requirements for the customer and implement them so that they are able to make a purchasing decision.
-11. Set edit mode to default to popup
+11. NOTE: Now I can research the requirements for the customer and implement them so that they are able to make a purchasing decision.
+12. Set edit mode to default to popup
     - Seems to just be a setting in the markup [here](https://docs.telerik.com/devtools/aspnet-ajax/controls/grid/data-editing/edit-mode/popup-edit-form)
-12. Configure Filtering on FirstName and LastName Columns
+13. Configure Filtering on FirstName and LastName Columns
     - Can set this for all columns pretty easily but appears only needs to be done on FN and LN columns
     - I feel like since the data is string based it would be better to have filtering by letter of the alphabet
         - I could use a static list of A, B, C, D, E, etc.
-    - [Possible Sample](https://demos.telerik.com/aspnet-ajax/grid/examples/functionality/filtering/filter-templates/defaultcs.aspx)
+    - [Possible Sample] to follow(https://demos.telerik.com/aspnet-ajax/grid/examples/functionality/filtering/filter-templates/defaultcs.aspx)
     - I think I would have asked for more information here to understand their req's but I will just try to implement the excel like filtering since it is text and the filtering on names seems very excel like. Although, the filtering by letter would be an interesting exercise.
     - Followed the [excel-like sample](https://demos.telerik.com/aspnet-ajax/grid/examples/functionality/filtering/excel-like-filtering/defaultcs.aspx)
         - In Default.aspx
@@ -97,6 +97,6 @@
             - Add AutoPostbackOnFilter=true and CurrentFilterFunction=EqualTo for FirstName and LastName Columns
         - In Default.aspx.cs
             - Implemented RadGrid1_FilterCheckListItemsRequested function with filter sql query
-13. Change all ASP controls to Telerik controls in Employee Detail user control file.
+14. Change all ASP controls to Telerik controls in Employee Detail user control file.
     - 
-14. Add Export to html to DOCX
+15. Add Export to html to DOCX
