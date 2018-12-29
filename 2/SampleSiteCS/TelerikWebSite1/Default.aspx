@@ -53,7 +53,7 @@
             AllowSorting="True" AutoGenerateColumns="False" ShowStatusBar="true" 
             OnPreRender="RadGrid1_PreRender" OnNeedDataSource="RadGrid1_NeedDataSource" OnUpdateCommand="RadGrid1_UpdateCommand"
             OnInsertCommand="RadGrid1_InsertCommand" OnDeleteCommand="RadGrid1_DeleteCommand">
-            <MasterTableView Width="100%" CommandItemDisplay="Top" DataKeyNames="EmployeeID" EditFormSettings-PopUpSettings-KeepInScreenBounds="true">
+            <MasterTableView Width="100%" CommandItemDisplay="Top" DataKeyNames="EmployeeID" EditMode="PopUp" EditFormSettings-PopUpSettings-KeepInScreenBounds="true">
                 <Columns>
                     <telerik:GridButtonColumn UniqueName="DeleteColumn" Text="Delete" CommandName="Delete">
                     </telerik:GridButtonColumn>

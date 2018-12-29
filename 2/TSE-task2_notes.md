@@ -80,6 +80,8 @@
             -   ASP.NET WebForms 403.14 error [reference](https://stackoverflow.com/questions/7880852/http-error-403-14-forbidden-error-when-accessing-website)
             -   Reviewed live demo web config and matched the add key node in the appsetting of the web.config
 * Now I can research the requirements for the customer and implement them so that they are able to make a purchasing decision.
+11. Set edit mode to default to popup
+    - https://docs.telerik.com/devtools/aspnet-ajax/controls/grid/data-editing/edit-mode/popup-edit-form
 
 11. Change all ASP controls to Telerik controls in Employee Detail user control file.
     - 
