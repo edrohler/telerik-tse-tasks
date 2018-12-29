@@ -7,7 +7,7 @@
     <title></title>
     <telerik:RadStyleSheetManager id="RadStyleSheetManager1" runat="server">
         <StyleSheets>
-            <telerik:StyleSheetReference Path="~/styles.css" />
+            <telerik:StyleSheetReference Path="~/Styles/main.css" />
         </StyleSheets>
     </telerik:RadStyleSheetManager>
 </head>
