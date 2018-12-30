@@ -98,5 +98,13 @@
         - In Default.aspx.cs
             - Implemented RadGrid1_FilterCheckListItemsRequested function with filter sql query
 14. Change all ASP controls to Telerik controls in Employee Detail user control file.
-    - 
+    - Changed All of the Controls
+    - ASP:TextBox -> Telerik:RadTextBox
+    - ASP:DropDownList -> Telerik:RadDropDownList
+        - Have a bug with this one. Once I changed it. It seems the inserts and updates aren't appearing in the radgrid. Which is weird. 
+        - The TOC changes weren't appearing because the datatable was updating based on value of the array and not the text value.
+            - I changed this to reade the text instead of value
+    - ASP:Button -> Telerik:RadButton
+    - After testing these changes I noticed nothing has propagated to the database. Which may or may not be expected. Not sure. I think this is because of the db refresh in the demo's are not actually saving to the database just reading from the database at refresh.
+    - I also made some refactorings of the code using vs productivity tools
 15. Add Export to html to DOCX
