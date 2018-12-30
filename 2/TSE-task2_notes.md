@@ -35,16 +35,17 @@
         - Source: ```C:\Program Files (x86)\Progress\Telerik UI for ASP.NET AJAX R3 2018\Live Demos\App_Data```
         - Destination: Your Project Folder App_Data folder
     2. Upgrade the Database file
-        - [Followed Upgrade mdf files](https://docs.microsoft.com/en-us/visualstudio/data-tools/upgrade-dot-mdf-files?view=vs-2017)
+        - Followed [upgrade mdf files](https://docs.microsoft.com/en-us/visualstudio/data-tools/upgrade-dot-mdf-files?view=vs-2017) tutorial.
     2. Open Default.aspx in Design View in Visual Studio
     3. Select RadGrid and Click the Configuration Button
     4. Choose Data Source
-        - This was not used as it would eventually use the DataTable binding in the code behind.
-6. Bind Grid to DataTable [Reviewed Tutorial for reference](https://docs.telerik.com/devtools/aspnet-ajax/controls/grid/data-binding/understanding-data-binding/server-side-binding/various-data-sources/binding-to-datatable-or-dataset)
+        - This was not used as it would eventually use the DataTable binding in the code behind. But needed to create the initial data source
+6. Bind Grid to DataTable 
+    - Reviewed [tutorial](https://docs.telerik.com/devtools/aspnet-ajax/controls/grid/data-binding/understanding-data-binding/server-side-binding/various-data-sources/binding-to-datatable-or-dataset) for reference
     - This wasn't actually needed can just use the exisiting code but is good to have for reference.
 7. Add a MasterPage 
-    - This wasn't needed. Only used to organize the large demo project. We can isolate the Demo Default.aspx/cs pages and use it as the master page by combining the DOCTYPE, html, Head and Body tags from teh MastPage.master file in teh live demos folder.
-    - Items to bring over:
+    - This wasn't needed. Only used to organize the large demo project. We can isolate the Demo Default.aspx/cs pages and use it as the master page by combining the DOCTYPE, html, Head and Body tags from teh MastPage.master file in the live demos folder.
+    1. Copy items from master page to sample default.aspx:
         1. DOCTYPE
         2. Head tag
             1. Title tag
@@ -56,30 +57,30 @@
     2.  RadStyleSheetManager tag
     3.  RadCodeBlock tag with inline JS scripts
     4.  RadAjaxManager tag
-        - Remove configurator panel because defaulting to popup form edit mode
+        1. Remove configurator panel because defaulting to popup form edit mode
     5. RadAjaxLoadingPanel tag
     6. RadFormDecortator tag
-    7. Add appsettings for script and stylesheet maangers
+    7. Add appsettings key/value pairs for script and stylesheet managers
     8. Copy radgrid control markup
     9. Copy radgrid code behind
-        - Remove the method refernce to the radio button in the Page_Load
-        - Remove the RadioButtonList1_SelectedIndexChanged method
+        1. Remove the method refernce to the radio button in the Page_Load
+        2. Remove the RadioButtonList1_SelectedIndexChanged method
 9. Add EmployeeDetail Web User control file in VS
     1. EmployeeDetail.ascx
     2. EmployeeDetail.ascs.cs
     - Ensure reference to EmployeeDetail in Default.aspx is correct
-10. Copy the EmployeeDetailsCS.ascx and code behind to new file
-* At this point, I was able to isolate the demo into a separate project where it was functional and could run without error. However, this included some additional steps not found in the live demo.
+10. Copy the EmployeeDetailsCS.ascx and code behind to new EmployeeDetail web user control file
+* NOTE: At this point, I was able to isolate the demo into a separate project where it was functional and could run without error. However, this included some additional steps not found in the live demo.
     - I needed to add the datasource and update the northwind db to meet my environment req's
     - I deleted the initial grid that I created when adding the datasource.
         - Essentially, I had to try something and then back it out which makes version control so awesome. :)    
     - I reviewed the demo code and compared it to the new project created and merged everything that was needed.
-    - I added a global.asax file and edited the webconfig file.
+    - I added a global.asax file and edited the web.config file.
         - I ran into an error when referencing the stylesheet folders after copying the code over
         - I researched on StackOverflow for the answer to this quick issues.
             -   IIS 403.14 error [reference](https://stackoverflow.com/questions/7880852/http-error-403-14-forbidden-error-when-accessing-website)
             -   Reviewed live demo web config and matched the add key node in the appsetting of the web.config
-11. NOTE: Now I can research the requirements for the customer and implement them so that they are able to make a purchasing decision.
+* Now I can research the requirements for the customer and implement them so that they are able to make a purchasing decision.
 12. Set edit mode to default to popup
     - Seems to just be a setting in the markup [here](https://docs.telerik.com/devtools/aspnet-ajax/controls/grid/data-editing/edit-mode/popup-edit-form)
 13. Configure Filtering on FirstName and LastName Columns
@@ -98,18 +99,18 @@
         2. In Default.aspx.cs
             1. Implemented RadGrid1_FilterCheckListItemsRequested function with filter sql query
 14. Change all ASP controls to Telerik controls in Employee Detail user control file.
-    - Just dragged Telerik controls from the vs toolbox and copied code from original asp controls.
+    - Just drag Telerik controls from the vs toolbox and copied code from original asp controls.
     1. Changed All of the Controls
         1. ASP:TextBox -> Telerik:RadTextBox
         2. ASP:DropDownList -> Telerik:RadDropDownList
-            - Have a bug with this one. Once I changed it. It seems the inserts and updates aren't appearing in the radgrid. Which is weird. 
+            - Had a bug with this one. Once I changed it. It seems the inserts and updates aren't appearing in the radgrid after clicking the button. Which is weird. 
             - The TOC changes weren't appearing because the datatable was updating based on value of the array and not the text value.
                 - I changed this to read the text instead of value and worked fine
         3. ASP:Button -> Telerik:RadButton
     - After testing these changes I noticed nothing has propagated to the database. Which may or may not be expected. Not sure. I think this is because of the db refresh in the demo's. Where they are not actually saving to the database just editing the datatable and reading from thea actual database at refresh intervals.
     2. Had to change the refernce in the Default.aspx.cs code to match the new Telerik Controls.
         - There might be a better way to refactor this so that there are less hard-coded references to the controls.
-    3. I also refactored some of the other code using vs productivity tools like, usings and simplifying instantiations.=
+    3. I also refactored some of the other code using vs productivity tools like, usings and simplifying instantiations.
 15. Add Export to html to DOCX
     - Reviewed [reference Doc](https://docs.telerik.com/devtools/aspnet-ajax/controls/grid/functionality/exporting/overview.html)
     - Reviewed [sample code](https://demos.telerik.com/aspnet-ajax/grid/examples/functionality/exporting/export-word-csv/defaultcs.aspx)
@@ -121,4 +122,4 @@
         2. ExportOnlyData=true
     - Would follow up with more information on this to see exactly where the customer was experiencing issues 
         - Could be formatting or filenaming. Not sure. Seemed easier than expected.
-16. At this point, I have all of the requirements for the customer and can draft reply.
+* At this point, I have all of the requirements for the customer and can draft reply.
