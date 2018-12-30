@@ -140,7 +140,7 @@ public partial class Default : Page
         newValues["Region"] = (userControl.FindControl("RegionTextBox") as RadTextBox).Text;
         newValues["HomePhone"] = (userControl.FindControl("HomePhoneBox") as RadMaskedTextBox).Text;
         newValues["BirthDate"] = (userControl.FindControl("BirthDatePicker") as RadDatePicker).SelectedDate.ToString();
-        newValues["TitleOfCourtesy"] = (userControl.FindControl("TOCDropDownList") as DropDownList).SelectedItem.Text;
+        newValues["TitleOfCourtesy"] = (userControl.FindControl("TOCDropDownList") as RadDropDownList).SelectedItem.Text;
 
         newValues["Notes"] = (userControl.FindControl("NotesTextBox") as RadTextBox).Text;
         newValues["Address"] = (userControl.FindControl("AddressTextBox") as RadTextBox).Text;

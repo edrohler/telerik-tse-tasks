@@ -38,11 +38,6 @@
                         <telerik:AjaxUpdatedControl ControlID="RadGrid1" LoadingPanelID="RadAjaxLoadingPanel1"></telerik:AjaxUpdatedControl>
                     </UpdatedControls>
                 </telerik:AjaxSetting>
-                <telerik:AjaxSetting AjaxControlID="ConfiguratorPanel">
-                    <UpdatedControls>
-                        <telerik:AjaxUpdatedControl ControlID="RadGrid1" LoadingPanelID="RadAjaxLoadingPanel1"></telerik:AjaxUpdatedControl>
-                    </UpdatedControls>
-                </telerik:AjaxSetting>
             </AjaxSettings>
         </telerik:RadAjaxManager>
         <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1" runat="server">
@@ -54,7 +49,11 @@
                 AllowSorting="True" AutoGenerateColumns="False" ShowStatusBar="True"
                 OnPreRender="RadGrid1_PreRender" OnNeedDataSource="RadGrid1_NeedDataSource" OnUpdateCommand="RadGrid1_UpdateCommand"
                 OnInsertCommand="RadGrid1_InsertCommand" OnDeleteCommand="RadGrid1_DeleteCommand">
-                <MasterTableView Width="100%" CommandItemDisplay="Top" DataKeyNames="EmployeeID" EditMode="PopUp" EditFormSettings-PopUpSettings-KeepInScreenBounds="true">
+                <ExportSettings HideStructureColumns="true" ExportOnlyData="true">
+                </ExportSettings>
+                <MasterTableView Width="100%" CommandItemDisplay="Top" DataKeyNames="EmployeeID" EditMode="PopUp"
+                    EditFormSettings-PopUpSettings-KeepInScreenBounds="true">
+                    <CommandItemSettings ShowExportToWordButton="true" />
                     <Columns>
                         <telerik:GridButtonColumn UniqueName="DeleteColumn" Text="Delete" CommandName="Delete">
                         </telerik:GridButtonColumn>
