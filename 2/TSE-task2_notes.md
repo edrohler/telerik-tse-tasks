@@ -128,6 +128,8 @@
 
 * After doing these exercises, it would be really awesome to blog and stream (twitch/youtube) about tips and tricks for using Telerik tools. This may help with marketing too.
 
+* Ran into an issue where the zipped folder was too large to email. Not sure if this would be an issue but have shared a GitHub repository to download and can be easily
+
 ## Reply
 
 ---
@@ -144,7 +146,13 @@ Per your request, the attached zip file contains a Visual Studio solution using 
 4. All ASP WebForm controls have been replaced with Telerik's controls.
 5. The export to Word functionality is implemented on the RadGrid.
 
-- Please note, that the solution is VS 2017 Community edition which is free and can be found [here](https://visualstudio.microsoft.com/vs/community/). You should be able to run the solution directly from the zip folder using this version. Furthermore, VS 2017 can be ran side-by-side with other versions.
+- Please note, that the solution is VS 2017 Community edition which is free and can be found [here](https://visualstudio.microsoft.com/vs/community/). Furthermore, VS 2017 can be ran side-by-side with other versions.
+
+In order to get the project to run. You have a few options.
+
+1. Clone the [GitHub Repository](https://github.com/edrohler/telerik-tse-tasks/tree/master/2/SampleSiteCS).
+2. Create a new Blank Telerik Website Project in VS and copy the code over
+3. Extract the zip and copy the Telerik Binaries from the live demos folder located at ```C:\Program Files (x86)\Progress\Telerik UI for ASP.NET AJAX R3 2018\Live Demos\Bin```.
 
 Additionally, thank you for the feedback on the demo description being difficult to follow. Your feedback is important to us and as a result, we have begun the process of updating the documentation. Please continue to let us know how we are doing by using our forums, contact forms or other means of communication.
 
