@@ -45,12 +45,12 @@
 7. Add a MasterPage 
     - This wasn't needed. Only used to organize the large demo project. We can isolate the Demo Default.aspx/cs pages and use it as the master page by combining the DOCTYPE, html, Head and Body tags from teh MastPage.master file in teh live demos folder.
     - Items to bring over:
-        - DOCTYPE
-        - Head tag
-            - Title tag
-            - Favicon tag
-            - Meta tag
-        - Body tag
+        1. DOCTYPE
+        2. Head tag
+            1. Title tag
+            2. Favicon tag
+            4. Meta tag
+        3. Body tag
 8. Copy Code from demo DefaultCS.aspx to sample Default.aspx
     1.  RadScriptManager tag
     2.  RadStyleSheetManager tag
@@ -65,8 +65,8 @@
         - Remove the method refernce to the radio button in the Page_Load
         - Remove the RadioButtonList1_SelectedIndexChanged method
 9. Add EmployeeDetail Web User control file in VS
-    - EmployeeDetail.ascx
-    - EmployeeDetail.ascs.cs
+    1. EmployeeDetail.ascx
+    2. EmployeeDetail.ascs.cs
     - Ensure reference to EmployeeDetail in Default.aspx is correct
 10. Copy the EmployeeDetailsCS.ascx and code behind to new file
 * At this point, I was able to isolate the demo into a separate project where it was functional and could run without error. However, this included some additional steps not found in the live demo.
@@ -86,33 +86,37 @@
     - Can set this for all columns pretty easily but appears only needs to be done on FN and LN columns
     - I feel like since the data is string based it would be better to have filtering by letter of the alphabet
         - I could use a static list of A, B, C, D, E, etc.
-    - [Possible Sample] to follow(https://demos.telerik.com/aspnet-ajax/grid/examples/functionality/filtering/filter-templates/defaultcs.aspx)
+    - [Possible Sample](https://demos.telerik.com/aspnet-ajax/grid/examples/functionality/filtering/filter-templates/defaultcs.aspx) to follow
     - I think I would have asked for more information here to understand their req's but I will just try to implement the excel like filtering since it is text and the filtering on names seems very excel like. Although, the filtering by letter would be an interesting exercise.
     - Followed the [excel-like sample](https://demos.telerik.com/aspnet-ajax/grid/examples/functionality/filtering/excel-like-filtering/defaultcs.aspx)
-        - In Default.aspx
-            - Add AllowFilteringByColumn=true to RadGrid1
-            - Add FilterType=checklist to RadGrid1
-            - Add OnFilterListItemsRequested=RadGrid1_FilterCheckListItemsRequested to RadGrid1
-            - Add AllowFiltering=false to All Columns except FirstName and LastName
-            - Add AutoPostbackOnFilter=true and CurrentFilterFunction=EqualTo for FirstName and LastName Columns
-        - In Default.aspx.cs
-            - Implemented RadGrid1_FilterCheckListItemsRequested function with filter sql query
+        1. In Default.aspx
+            1. Add AllowFilteringByColumn=true to RadGrid1
+            2. Add FilterType=checklist to RadGrid1
+            3. Add OnFilterListItemsRequested=RadGrid1_FilterCheckListItemsRequested to RadGrid1
+            4. Add AllowFiltering=false to All Columns except FirstName and LastName
+            5. Add AutoPostbackOnFilter=true and CurrentFilterFunction=EqualTo for FirstName and LastName Columns
+        2. In Default.aspx.cs
+            1. Implemented RadGrid1_FilterCheckListItemsRequested function with filter sql query
 14. Change all ASP controls to Telerik controls in Employee Detail user control file.
-    - Changed All of the Controls
-        - ASP:TextBox -> Telerik:RadTextBox
-        - ASP:DropDownList -> Telerik:RadDropDownList
+    - Just dragged Telerik controls from the vs toolbox and copied code from original asp controls.
+    1. Changed All of the Controls
+        1. ASP:TextBox -> Telerik:RadTextBox
+        2. ASP:DropDownList -> Telerik:RadDropDownList
             - Have a bug with this one. Once I changed it. It seems the inserts and updates aren't appearing in the radgrid. Which is weird. 
             - The TOC changes weren't appearing because the datatable was updating based on value of the array and not the text value.
-                - I changed this to reade the text instead of value
-        - ASP:Button -> Telerik:RadButton
-    - After testing these changes I noticed nothing has propagated to the database. Which may or may not be expected. Not sure. I think this is because of the db refresh in the demo's. Where they are not actually saving to the database just editing the datatable and reading from thea actual database at refresh.
-    - I also made some refactorings of the code using vs productivity tools
+                - I changed this to read the text instead of value and worked fine
+        3. ASP:Button -> Telerik:RadButton
+    - After testing these changes I noticed nothing has propagated to the database. Which may or may not be expected. Not sure. I think this is because of the db refresh in the demo's. Where they are not actually saving to the database just editing the datatable and reading from thea actual database at refresh intervals.
+    2. Had to change the refernce in the Default.aspx.cs code to match the new Telerik Controls.
+        - There might be a better way to refactor this so that there are less hard-coded references to the controls.
+    3. I also refactored some of the other code using vs productivity tools like, usings and simplifying instantiations.=
 15. Add Export to html to DOCX
-    - [Reference Doc](https://docs.telerik.com/devtools/aspnet-ajax/controls/grid/functionality/exporting/overview.html)
+    - Reviewed [reference Doc](https://docs.telerik.com/devtools/aspnet-ajax/controls/grid/functionality/exporting/overview.html)
+    - Reviewed [sample code](https://demos.telerik.com/aspnet-ajax/grid/examples/functionality/exporting/export-word-csv/defaultcs.aspx)
     - Was all declarative which is nice.
-    - Add CommandItemSettings tag in RadGrid
+    1. Add CommandItemSettings tag in RadGrid
         - Set ShowExportToWord=true
-    - Add ExportSettings in RadGrid
+    2. Add ExportSettings in RadGrid
         - HideStructureColumns=true
         - ExportOnlyData=true
     - Would follow up with more information on this to see exactly where the customer was experiencing issues 
