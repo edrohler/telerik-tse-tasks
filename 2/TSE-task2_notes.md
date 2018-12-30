@@ -148,7 +148,9 @@ Per your request, the attached zip file contains a Visual Studio solution using 
 
 Additionally, thank you for the feedback on the demo description being difficult to follow. Your feedback is important to us and as a result, we have begun the process of updating the documentation. Please continue to let us know how we are doing by using our forums, contact forms or other means of communication.
 
-Lastly, I hope that I have provided you with all of the necessary information to make your decision and look forward to supporting you as a Telerik customer. Please let me know if you have any additional questions or if you request has been resolved. 
+Lastly, I hope that I have provided you with all of the necessary information to make your decision and look forward to supporting you as a Telerik customer.
+
+Thank you again for contacting Telerik Support Services and please let me know if you have any additional questions and if you request has been resolved. 
 
 
 Sincerely, 
