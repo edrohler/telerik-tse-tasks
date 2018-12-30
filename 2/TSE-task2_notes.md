@@ -115,10 +115,10 @@
     - Reviewed [sample code](https://demos.telerik.com/aspnet-ajax/grid/examples/functionality/exporting/export-word-csv/defaultcs.aspx)
     - Was all declarative which is nice.
     1. Add CommandItemSettings tag in RadGrid
-        - Set ShowExportToWord=true
+        1. Set ShowExportToWord=true
     2. Add ExportSettings in RadGrid
-        - HideStructureColumns=true
-        - ExportOnlyData=true
+        1. HideStructureColumns=true
+        2. ExportOnlyData=true
     - Would follow up with more information on this to see exactly where the customer was experiencing issues 
         - Could be formatting or filenaming. Not sure. Seemed easier than expected.
 16. At this point, I have all of the requirements for the customer and can draft reply.
