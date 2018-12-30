@@ -108,3 +108,13 @@
     - After testing these changes I noticed nothing has propagated to the database. Which may or may not be expected. Not sure. I think this is because of the db refresh in the demo's. Where they are not actually saving to the database just editing the datatable and reading from thea actual database at refresh.
     - I also made some refactorings of the code using vs productivity tools
 15. Add Export to html to DOCX
+    - [Reference Doc](https://docs.telerik.com/devtools/aspnet-ajax/controls/grid/functionality/exporting/overview.html)
+    - Was all declarative which is nice.
+    - Add CommandItemSettings tag in RadGrid
+        - Set ShowExportToWord=true
+    - Add ExportSettings in RadGrid
+        - HideStructureColumns=true
+        - ExportOnlyData=true
+    - Would follow up with more information on this to see exactly where the customer was experiencing issues 
+        - Could be formatting or filenaming. Not sure. Seemed easier than expected.
+16. At this point, I have all of the requirements for the customer and can draft reply.
