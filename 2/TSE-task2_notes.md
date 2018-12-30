@@ -9,6 +9,8 @@
     * Use only Telerik Controls in EmployeeDetail Control
     * Export HTML output to DOCX
 
+## Notes
+
 1. Install the demo's locally using Progress Control Panel
     1. Select item in control panel and click turn features on or off
     2. Select live demos checkbox
@@ -123,3 +125,38 @@
     - Would follow up with more information on this to see exactly where the customer was experiencing issues 
         - Could be formatting or filenaming. Not sure. Seemed easier than expected.
 * At this point, I have all of the requirements for the customer and can draft reply.
+
+* After doing these exercises, it would be really awesome to blog and stream (twitch/youtube) about tips and tricks for using Telerik tools. This may help with marketing too.
+
+## Reply
+
+---
+
+Dear John, 
+
+Thank you for contacting Telerik Support Services. My goal is ensure that your request is resolved in an accurate and effecient manner. After reviewing the request, I understand that you have a use case for our RadGrid with specific requirment's derived from the demo located [here](https://demos.telerik.com/aspnet-ajax/grid/examples/data-editing/edit-form-types/defaultcs.aspx).
+
+Per your request, the attached zip file contains a Visual Studio solution using our RadGrid and has the following features:
+
+1. The edit mode is defaulted to PopUp.
+2. The first column is the Delete Column.
+3. The filtering functionality is enabled on the first and last name.
+4. All ASP WebForm controls have been replaced with Telerik's controls.
+5. The export to Word functionality is implemented on the RadGrid.
+
+- Please note, that the solution is VS 2017 Community edition which is free and can be found [here](https://visualstudio.microsoft.com/vs/community/). You should be able to run the solution directly from the zip folder using this version. Furthermore, VS 2017 can be ran side-by-side with other versions.
+
+Additionally, thank you for the feedback on the demo description being difficult to follow. Your feedback is important to us and as a result, we have begun the process of updating the documentation. Please continue to let us know how we are doing by using our forums, contact forms or other means of communication.
+
+Lastly, I hope that I have provided you with all of the necessary information to make your decision and look forward to supporting you as a Telerik customer. Please let me know if you have any additional questions or if you request has been resolved. 
+
+
+Sincerely, 
+
+Eric D. Rohler |
+Technical Support Engineer |
+Telerik a Progress Company |
+Modern UI Made Easy |
+[Telerik](https://www.telerik.com)
+
+[Attachment](./SampleSiteCS.zip)
