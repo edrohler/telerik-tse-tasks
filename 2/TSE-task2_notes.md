@@ -150,7 +150,7 @@ Additionally, thank you for the feedback on the demo description being difficult
 
 Lastly, I hope that I have provided you with all of the necessary information to make your decision and look forward to supporting you as a Telerik customer.
 
-Thank you again for contacting Telerik Support Services and please let me know if you have any additional questions and if you request has been resolved. 
+Thank you again for contacting Telerik Support Services. Please let me know if you have any additional questions and if you request has been resolved. 
 
 
 Sincerely, 
