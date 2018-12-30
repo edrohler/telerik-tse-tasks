@@ -17,24 +17,21 @@
                     <td>Country:
                     </td>
                     <td>
-                        <asp:TextBox ID="TextBox7" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.Country") %>'>
-                        </asp:TextBox>
+                        <telerik:RadTextBox ID="CountryTextBox" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.Country") %>' TabIndex="1"></telerik:RadTextBox>
                     </td>
                 </tr>
                 <tr>
                     <td>City:
                     </td>
                     <td>
-                        <asp:TextBox ID="TextBox8" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.City") %>'>' TabIndex="1">
-                        </asp:TextBox>
+                        <telerik:RadTextBox ID="CityTextBox" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.City") %>' TabIndex="2"></telerik:RadTextBox>
                     </td>
                 </tr>
                 <tr>
                     <td>Region:
                     </td>
                     <td>
-                        <asp:TextBox ID="TextBox9" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.Region") %>'>' TabIndex="2">
-                        </asp:TextBox>
+                        <telerik:RadTextBox ID="RegionTextBox" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.Region") %>' TabIndex="3"></telerik:RadTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -46,28 +43,26 @@
                     <td>Title Of Courtesy
                     </td>
                     <td>
-                        <asp:DropDownList ID="ddlTOC" runat="server" SelectedValue='<%# DataBinder.Eval(Container, "DataItem.TitleOfCourtesy") %>'
-                            DataSource='<%# (new string[] { "Dr.", "Mr.", "Mrs.", "Ms." }) %>' TabIndex="7"
-                            AppendDataBoundItems="True">
-                            <asp:ListItem Selected="True" Text="Select" Value="">
-                            </asp:ListItem>
-                        </asp:DropDownList>
+                        <telerik:RadDropDownList ID="TOCDropDownList" runat="server" SelectedValue='<%# DataBinder.Eval(Container, "DataItem.TitleOfCourtesy") %>'
+                            DataSource='<%# (new string[] { "Dr.", "Mr.", "Mrs.", "Ms." }) %>'
+                            AppendDataBoundItems="True"
+                            TabIndex="4"
+                            DefaultMessage="Select..">
+                        </telerik:RadDropDownList>
                     </td>
                 </tr>
                 <tr>
-                    <td>FirstName:
+                    <td>First Name:
                     </td>
                     <td>
-                        <asp:TextBox ID="TextBox2" Text='<%# Bind( "FirstName") %>' runat="server" TabIndex="8">
-                        </asp:TextBox>
+                        <telerik:RadTextBox ID="FirstNameTextBox" Text='<%# Bind( "FirstName") %>' runat="server" TabIndex="5"></telerik:RadTextBox>
                     </td>
                 </tr>
                 <tr>
                     <td>Last Name:
                     </td>
                     <td>
-                        <asp:TextBox ID="TextBox3" Text='<%# Bind( "LastName") %>' runat="server" TabIndex="9">
-                        </asp:TextBox>
+                        <telerik:RadTextBox ID="LastNameTextBox" Text='<%# Bind( "LastName") %>' runat="server" TabIndex="6"></telerik:RadTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -75,7 +70,7 @@
                     </td>
                     <td>
                         <telerik:RadDatePicker ID="BirthDatePicker" runat="server" MinDate="1/1/1900" DbSelectedDate='<%# DataBinder.Eval(Container, "DataItem.BirthDate") %>'
-                            TabIndex="4">
+                            TabIndex="7">
                         </telerik:RadDatePicker>
                     </td>
                 </tr>
@@ -84,7 +79,7 @@
                     </td>
                     <td>
                         <telerik:RadDatePicker ID="HireDatePicker" DbSelectedDate='<%# DataBinder.Eval(Container, "DataItem.HireDate") %>'
-                            runat="server" TabIndex="10">
+                            runat="server" TabIndex="8">
                         </telerik:RadDatePicker>
                     </td>
                 </tr>
@@ -92,8 +87,7 @@
                     <td>Title:
                     </td>
                     <td>
-                        <asp:TextBox ID="TextBox4" Text='<%# DataBinder.Eval(Container, "DataItem.Title") %>' runat="server" TabIndex="11">
-                        </asp:TextBox>
+                        <telerik:RadTextBox ID="TitleTextBox" Text='<%# DataBinder.Eval(Container, "DataItem.Title") %>' runat="server" TabIndex="9"></telerik:RadTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -102,7 +96,7 @@
                     <td>
                         <telerik:RadMaskedTextBox ID="HomePhoneBox" runat="server" SelectionOnFocus="SelectAll"
                             Text='<%# DataBinder.Eval(Container, "DataItem.HomePhone") %>' PromptChar="_" Mask="(###) ###-####"
-                            TabIndex="3">
+                            TabIndex="10">
                         </telerik:RadMaskedTextBox>
                     </td>
                 </tr>
@@ -116,9 +110,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:TextBox ID="TextBox1" Text='<%# DataBinder.Eval(Container, "DataItem.Notes") %>' runat="server" TextMode="MultiLine"
-                            Rows="5" Columns="40" TabIndex="5">
-                        </asp:TextBox>
+                        <telerik:RadTextBox ID="NotesTextBox" Text='<%# DataBinder.Eval(Container, "DataItem.Notes") %>' runat="server" TextMode="MultiLine"
+                            Rows="5" Columns="40" TabIndex="11">
+                        </telerik:RadTextBox>
                     </td>
                 </tr>
                 <tr>
@@ -127,9 +121,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:TextBox ID="TextBox6" Text='<%# DataBinder.Eval(Container, "DataItem.Address") %>' runat="server" TextMode="MultiLine"
-                            Rows="2" Columns="40" TabIndex="6">
-                        </asp:TextBox>
+                        <telerik:RadTextBox ID="AddressTextBox" Text='<%# DataBinder.Eval(Container, "DataItem.Address") %>' runat="server" TextMode="MultiLine"
+                            Rows="2" Columns="40" TabIndex="12">
+                        </telerik:RadTextBox>
                     </td>
                 </tr>
             </table>
@@ -144,10 +138,13 @@
     </tr>
     <tr>
         <td align="right" colspan="2">
-            <asp:Button ID="btnUpdate" Text='<%# (Container is GridEditFormInsertItem) ? "Insert" : "Update" %>'
-                runat="server" CommandName='<%# (Container is GridEditFormInsertItem) ? "PerformInsert" : "Update" %>'></asp:Button>&nbsp;
-                                    <asp:Button ID="btnCancel" Text="Cancel" runat="server" CausesValidation="False"
-                                        CommandName="Cancel"></asp:Button>
+            <telerik:RadButton ID="btnUpdate" Text='<%# (Container is GridEditFormInsertItem) ? "Insert" : "Update" %>'
+                runat="server" CommandName='<%# (Container is GridEditFormInsertItem) ? "PerformInsert" : "Update" %>'>
+            </telerik:RadButton>
+            &nbsp;
+            <telerik:RadButton ID="btnCancel" Text="Cancel" runat="server" CausesValidation="False"
+                CommandName="Cancel">
+            </telerik:RadButton>
         </td>
     </tr>
 </table>

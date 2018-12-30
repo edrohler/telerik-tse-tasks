@@ -7,7 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Telerik.Web.UI;
 
-public partial class Default : System.Web.UI.Page 
+public partial class Default : Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -25,7 +25,7 @@ public partial class Default : System.Web.UI.Page
 
     private static DataTable GetDataTable(string queryString)
     {
-        String ConnString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+        string ConnString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         SqlConnection MySqlConnection = new SqlConnection(ConnString);
         SqlDataAdapter MySqlDataAdapter = new SqlDataAdapter
         {
@@ -86,19 +86,19 @@ public partial class Default : System.Web.UI.Page
         //Update new values
         Hashtable newValues = new Hashtable();
 
-        newValues["Country"] = (userControl.FindControl("TextBox7") as TextBox).Text;
-        newValues["City"] = (userControl.FindControl("TextBox8") as TextBox).Text;
-        newValues["Region"] = (userControl.FindControl("TextBox9") as TextBox).Text;
+        newValues["Country"] = (userControl.FindControl("CountryTextBox") as RadTextBox).Text;
+        newValues["City"] = (userControl.FindControl("CityTextBox") as RadTextBox).Text;
+        newValues["Region"] = (userControl.FindControl("RegionTextBox") as RadTextBox).Text;
         newValues["HomePhone"] = (userControl.FindControl("HomePhoneBox") as RadMaskedTextBox).Text;
         newValues["BirthDate"] = (userControl.FindControl("BirthDatePicker") as RadDatePicker).SelectedDate.ToString();
-        newValues["TitleOfCourtesy"] = (userControl.FindControl("ddlTOC") as DropDownList).SelectedItem.Value;
+        newValues["TitleOfCourtesy"] = (userControl.FindControl("TOCDropDownList") as RadDropDownList).SelectedItem.Text;
 
-        newValues["Notes"] = (userControl.FindControl("TextBox1") as TextBox).Text;
-        newValues["Address"] = (userControl.FindControl("TextBox6") as TextBox).Text;
-        newValues["FirstName"] = (userControl.FindControl("TextBox2") as TextBox).Text;
-        newValues["LastName"] = (userControl.FindControl("TextBox3") as TextBox).Text;
+        newValues["Notes"] = (userControl.FindControl("NotesTextBox") as RadTextBox).Text;
+        newValues["Address"] = (userControl.FindControl("AddressTextBox") as RadTextBox).Text;
+        newValues["FirstName"] = (userControl.FindControl("FirstNameTextBox") as RadTextBox).Text;
+        newValues["LastName"] = (userControl.FindControl("LastNameTextBox") as RadTextBox).Text;
         newValues["HireDate"] = (userControl.FindControl("HireDatePicker") as RadDatePicker).SelectedDate.ToString();
-        newValues["Title"] = (userControl.FindControl("TextBox4") as TextBox).Text;
+        newValues["Title"] = (userControl.FindControl("TitleTextBox") as RadTextBox).Text;
 
         changedRows[0].BeginEdit();
         try
@@ -135,19 +135,19 @@ public partial class Default : System.Web.UI.Page
         //Insert new values
         Hashtable newValues = new Hashtable();
 
-        newValues["Country"] = (userControl.FindControl("TextBox7") as TextBox).Text;
-        newValues["City"] = (userControl.FindControl("TextBox8") as TextBox).Text;
-        newValues["Region"] = (userControl.FindControl("TextBox9") as TextBox).Text;
+        newValues["Country"] = (userControl.FindControl("CountryTextBox") as RadTextBox).Text;
+        newValues["City"] = (userControl.FindControl("CityTextBox") as RadTextBox).Text;
+        newValues["Region"] = (userControl.FindControl("RegionTextBox") as RadTextBox).Text;
         newValues["HomePhone"] = (userControl.FindControl("HomePhoneBox") as RadMaskedTextBox).Text;
         newValues["BirthDate"] = (userControl.FindControl("BirthDatePicker") as RadDatePicker).SelectedDate.ToString();
-        newValues["TitleOfCourtesy"] = (userControl.FindControl("ddlTOC") as DropDownList).SelectedItem.Value;
+        newValues["TitleOfCourtesy"] = (userControl.FindControl("TOCDropDownList") as DropDownList).SelectedItem.Text;
 
-        newValues["Notes"] = (userControl.FindControl("TextBox1") as TextBox).Text;
-        newValues["Address"] = (userControl.FindControl("TextBox6") as TextBox).Text;
-        newValues["FirstName"] = (userControl.FindControl("TextBox2") as TextBox).Text;
-        newValues["LastName"] = (userControl.FindControl("TextBox3") as TextBox).Text;
+        newValues["Notes"] = (userControl.FindControl("NotesTextBox") as RadTextBox).Text;
+        newValues["Address"] = (userControl.FindControl("AddressTextBox") as RadTextBox).Text;
+        newValues["FirstName"] = (userControl.FindControl("FirstNameTextBox") as RadTextBox).Text;
+        newValues["LastName"] = (userControl.FindControl("LastNameTextBox") as RadTextBox).Text;
         newValues["HireDate"] = (userControl.FindControl("HireDatePicker") as RadDatePicker).SelectedDate.ToString();
-        newValues["Title"] = (userControl.FindControl("TextBox4") as TextBox).Text;
+        newValues["Title"] = (userControl.FindControl("TitleTextBox") as RadTextBox).Text;
 
         //make sure that unique primary key value is generated for the inserted row 
         newValues["EmployeeID"] = (int)Employees.Rows[Employees.Rows.Count - 1]["EmployeeID"] + 1;
