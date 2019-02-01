@@ -5,13 +5,19 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Telerik.Web.Device.Detection;
 using Telerik.Web.UI;
 
 public partial class Default : Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        //var screenSize = Detector.GetScreenSize(this.Request.UserAgent);
 
+        //if(screenSize >= DeviceScreenSize.Medium)
+        //{
+        //    this.RadGrid1.Visible = false;
+        //}
     }
 
     protected void RadGrid1_PreRender(object sender, System.EventArgs e)
